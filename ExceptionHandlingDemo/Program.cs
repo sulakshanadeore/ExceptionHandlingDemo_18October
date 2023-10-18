@@ -10,22 +10,43 @@ namespace ExceptionHandlingDemo
     {
         static void Main(string[] args)
         {
-           // NewMethod();
+            // NewMethod();
 
-            EmployeeMgt mgt = new EmployeeMgt();
+            string s = "Hello";
             try
+            { 
+                int strlen=s.Length;
+                if (strlen > 0)
+                {
+                    Console.WriteLine(strlen);
+                }
+                else
+                {
+                    throw new NullReferenceException("String is null or empty, so length cannot be calculated....");
+                }
+            }
+            catch (NullReferenceException ex)
             {
+
+                Console.WriteLine(  ex.Message);
+            }
+
+
+
+            //EmployeeMgt mgt = new EmployeeMgt();//all the data--list
+            //try
+            //{
 
             
-            Employee empfound=mgt.FindEmployee(10);
-            Console.WriteLine(empfound.Empid);
-            Console.WriteLine(  empfound.Empname);
-            }
-            catch (EmployeeNotFoundException ex)
-            {
+            //Employee empfound=mgt.FindEmployee(10);
+            //Console.WriteLine(empfound.Empid);
+            //Console.WriteLine(  empfound.Empname);
+            //}
+            //catch (EmployeeNotFoundException ex)
+            //{
 
-                Console.WriteLine(ex.Message); 
-            }
+            //    Console.WriteLine(ex.Message); 
+            //}
             Console.Read();
         }
 

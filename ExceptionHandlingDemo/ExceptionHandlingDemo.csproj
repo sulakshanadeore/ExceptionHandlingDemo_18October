@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ExceptionHandlingDemo.Program1</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExceptionDemo">
       <HintPath>..\ExceptionDemo\bin\Debug\ExceptionDemo.dll</HintPath>
@@ -47,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="Program1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
