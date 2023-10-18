@@ -10,7 +10,27 @@ namespace ExceptionHandlingDemo
     {
         static void Main(string[] args)
         {
+           // NewMethod();
 
+            EmployeeMgt mgt = new EmployeeMgt();
+            try
+            {
+
+            
+            Employee empfound=mgt.FindEmployee(10);
+            Console.WriteLine(empfound.Empid);
+            Console.WriteLine(  empfound.Empname);
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+
+                Console.WriteLine(ex.Message); 
+            }
+            Console.Read();
+        }
+
+        private static void NewMethod()
+        {
             try
             {
                 MathsCalculations cal = new MathsCalculations();
@@ -57,7 +77,6 @@ namespace ExceptionHandlingDemo
                 //Always fired whether there is exception or not.
 
             }
-            Console.Read();
         }
     }
 }
